@@ -24,10 +24,9 @@
     <script>
         $(document).ready(function () {
 
-            $(".accountButton").on("click", function (e) {
-                e.preventDefault();
-                alert("test")
-            })
+            $(".accountButton").forEach(element => {
+                console.log(element.text);
+            });
         })
     </script>
 </body>
