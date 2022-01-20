@@ -1,0 +1,21 @@
+#api .options {
+	display       : flex;
+	flex-direction: row;
+}
+
+#api .options div {
+	padding: 0.5rem;
+}
+
+#api .options button.accountButton {
+	border          : none;
+	font-size       : 0.8rem;
+	padding         : 0.5rem;
+	border-radius   : 0.5rem;
+	background-color: rgba(58, 59, 129, 0.1);
+	color           : #3a3b81;
+}
+
+#api .options button.accountButton:focus {
+	outline: none;
+}
