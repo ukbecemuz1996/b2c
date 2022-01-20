@@ -6,21 +6,132 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <script>
-        
-        const editSocialButtons = () => {
-            var btns = document.querySelectorAll('button[class=accountButton]');
-            for (var i = 0; i < btns.length; i++) {
-                console.log(btns[i]);
-            }
+    <style>
+        #api {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        editSocialButtons();
-    </script>
+        #api .options {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #api .options div {
+            padding: 0.5rem;
+        }
+
+        #api .options button.accountButton {
+            border: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            background-color: rgba(58, 59, 129, 0.1);
+            color: #3a3b81;
+        }
+
+        #api .options button.accountButton:focus {
+            outline: none;
+        }
+
+        .intro h2 {
+            color: #3a3b81;
+            font-size: x-large;
+        }
+
+        .divider {
+            position: relative;
+        }
+
+        #api {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        #api .localAccount {
+            width: 100%;
+        }
+
+        #api .social {
+            width: 100%;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #000;
+        }
+
+        .divider:not(:empty)::before {
+            margin-right: .25em;
+        }
+
+        .divider:not(:empty)::after {
+            margin-left: .25em;
+        }
+
+        .divider h2 {
+            font-size: large;
+        }
+
+        .entry .entry-item label {
+            display: none;
+        }
+
+        .entry .entry-item input {
+            width: 100%;
+            border-width: 1px;
+            border-color: rgb(0, 0, 0, 0.2);
+            border-style: solid;
+            border-radius: 0.2rem;
+            color: #3a3b81;
+            background-color: #fff;
+            padding: 0.5rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .entry .entry-item input:focus {
+            outline: 0px;
+        }
+
+        .entry .buttons button[type=submit] {
+            width: 100%;
+            border: none;
+            font-size: 0.8rem;
+            padding: 0.5rem;
+            border-radius: 0.2rem;
+            color: #fff;
+            background-color: #3a3b81;
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="api"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2>How Are You Rabea</h2>
+            </div>
+            <div class="col-6">
+                <div id="api"></div>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 
