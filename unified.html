@@ -24,7 +24,7 @@
     <script>
         $(document).ready(function () {
             console.log($(".accountButton"));
-            $(".accountButton").forEach(element => {
+            Array.from($(".accountButton")).forEach(element => {
                 console.log(element.text);
             });
         })
