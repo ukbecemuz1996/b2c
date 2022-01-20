@@ -23,10 +23,10 @@
 
     <script>
         $(document).ready(function () {
-            console.log($(".accountButton"));
-            Array.from($(".accountButton")).forEach(element => {
-                console.log(element.text);
-            });
+            for (let index = 0; index < $(".accountButton").length; index++) {
+                console.log($(".accountButton")[index].text);
+
+            }
         })
     </script>
 </body>
