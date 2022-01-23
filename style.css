@@ -5,8 +5,9 @@
 }
 
 #api .options {
-	display       : flex;
-	flex-direction: row;
+	display        : flex;
+	flex-direction : row;
+	justify-content: center;
 }
 
 #api .options div {
@@ -36,10 +37,12 @@
 	font-style    : normal;
 	font-family   : "Staatliches", serif;
 	color         : #3a3b81;
-	font-size     : 30px;
+	font-size     : 45px;
 	letter-spacing: 0px;
 	line-height   : 1.25;
 	text-transform: capitalize !important;
+	text-align    : center;
+	margin-bottom : 16px;
 }
 
 .divider {
@@ -66,7 +69,7 @@
 	text-align    : center;
 	width         : 50%;
 	margin-top    : 1rem;
-	margin-bottom : 1rem;
+	margin-bottom : 0 !important;
 	font-weight   : 400;
 	font-style    : normal;
 	font-family   : "Urbanist", serif;
@@ -75,6 +78,7 @@
 	line-height   : 1.2;
 	text-align    : center;
 	align-self    : center;
+
 }
 
 .divider::before,
@@ -155,6 +159,7 @@
 	letter-spacing  : 0px;
 	line-height     : 1.2;
 	text-align      : center;
+	margin-bottom   : 16px;
 }
 
 .entry .buttons button[type=submit]:focus {
@@ -215,9 +220,9 @@ form {
 }
 
 @media (max-width: 575.98px) {
-	.intro h2 {
+	/* .intro h2 {
 		font-size: 25px;
-	}
+	} */
 
 	.side-1 .jl-form {
 		padding-left : 5px;

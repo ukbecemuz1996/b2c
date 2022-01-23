@@ -14,6 +14,52 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;500&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap">
     <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <script>
+        const editSocialButtons = () => {
+
+            document.querySelectorAll(".accountButton").forEach((element) => {
+                element.innerHTML = getButtonIcon(element.id)
+            })
+
+            document.querySelectorAll(".divider").forEach((element) => {
+                if (element.parentElement.id !== "localAccountForm")
+                    element.remove()
+            })
+
+            document.querySelectorAll("#localAccountForm .divider h2").forEach((element) => {
+                element.innerHTML = "Or Continue With"
+            })
+
+            document.querySelectorAll("#localAccountForm .intro").forEach((element) => {
+                element.remove();
+            })
+
+            document.querySelectorAll(".claims-provider-list-buttons .intro h2").forEach((element) => {
+                element.innerHTML = "joblink";
+            })
+
+            document.querySelectorAll(".claims-provider-list-buttons .options").forEach((element1) => {
+                document.querySelectorAll("#localAccountForm .divider").forEach((element2) => {
+                    element2.after(element1);
+                })
+            })
+
+            console.log("iam here");
+        }
+
+
+        const getButtonIcon = (id) => {
+            switch (id) {
+                case "GoogleExchange":
+                    return '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3a3b81" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,128h88a88.1,88.1,0,1,1-25.8-62.2" fill="none" stroke="#3a3b81" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>';
+                case "FacebookExchange":
+                    return '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3a3b81" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="#3a3b81" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M168,88H152a23.9,23.9,0,0,0-24,24V224" fill="none" stroke="#3a3b81" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><line x1="96" y1="144" x2="160" y2="144" fill="none" stroke="#3a3b81" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>'
+            }
+        }
+
+        window.addEventListener("load", editSocialButtons);
+    </script>
     <style>
         body {
             width: 100%;
@@ -44,6 +90,7 @@
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
+            width: 70%;
         }
 
         .side-2 {
@@ -97,6 +144,7 @@
         #api .options {
             display: flex;
             flex-direction: row;
+            justify-content: center;
         }
 
         #api .options div {
@@ -126,10 +174,12 @@
             font-style: normal;
             font-family: "Staatliches", serif;
             color: #3a3b81;
-            font-size: 30px;
+            font-size: 45px;
             letter-spacing: 0px;
             line-height: 1.25;
             text-transform: capitalize !important;
+            text-align: center;
+            margin-bottom: 16px;
         }
 
         .divider {
@@ -156,7 +206,7 @@
             text-align: center;
             width: 50%;
             margin-top: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0 !important;
             font-weight: 400;
             font-style: normal;
             font-family: "Urbanist", serif;
@@ -165,6 +215,7 @@
             line-height: 1.2;
             text-align: center;
             align-self: center;
+
         }
 
         .divider::before,
@@ -245,7 +296,7 @@
             letter-spacing: 0px;
             line-height: 1.2;
             text-align: center;
-            border: none;
+            margin-bottom: 16px;
         }
 
         .entry .buttons button[type=submit]:focus {
@@ -306,17 +357,14 @@
         }
 
         @media (max-width: 575.98px) {
-            .intro h2 {
-                font-size: 25px;
-            }
+            /* .intro h2 {
+		font-size: 25px;
+	} */
 
             .side-1 .jl-form {
                 padding-left: 5px;
                 padding-right: 5px;
-                width: 90%;
             }
-
-
         }
 
         @media (min-width: 576px) and (max-width: 767.98px) {}
