@@ -1,0 +1,42 @@
+.intro p {
+    overflow      : visible;
+    font-weight   : 400;
+    font-style    : normal;
+    font-family   : "Staatliches", serif;
+    color         : #3a3b81;
+    font-size     : 40px;
+    letter-spacing: 0px;
+    line-height   : 1.25;
+    text-transform: capitalize !important;
+    text-align    : center;
+}
+
+#api div ul {
+    list-style          : none;
+    padding-inline-start: 0px;
+}
+
+#api .accountButton {
+    width           : 100%;
+    box-sizing      : border-box;
+	padding         : 16px;
+	overflow        : visible;
+	border-radius   : 4px;
+	font-weight     : 500;
+	font-style      : normal;
+	font-family     : "Urbanist", serif;
+	background-color: rgba(58, 59, 129, .1);
+	color           : #3a3b81;
+	font-size       : 14px;
+	letter-spacing  : 0px;
+	line-height     : 1.2;
+	text-align      : center;
+	margin-bottom   : 16px;
+	border          : none;
+	margin-left     : 5px;
+	margin-right    : 5px;
+}
+
+#api .accountButton:focus {
+    outline: none;
+}
