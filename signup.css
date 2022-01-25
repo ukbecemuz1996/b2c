@@ -1,0 +1,151 @@
+#attributeVerification {
+	width: 100%;
+}
+
+#attributeList ul {
+	display             : flex;
+	flex-direction      : column;
+	width               : 100%;
+	list-style          : none;
+	padding-inline-start: 0px;
+}
+
+#attributeList ul li {
+	width: 100%;
+}
+
+.attrEntry {
+	display       : flex;
+	flex-direction: column;
+	position      : relative;
+}
+
+.attrEntry label {
+	word-wrap     : break-word;
+	word-break    : break-word;
+	overflow      : hidden;
+	font-weight   : 400;
+	font-style    : normal;
+	font-family   : "Urbanist", serif;
+	color         : #919191;
+	font-size     : 12px;
+	letter-spacing: 0px;
+	line-height   : 1.2;
+	text-align    : left;
+}
+
+.attrEntry input {
+	width           : 100%;
+	color           : rgb(61, 61, 61);
+	margin-top      : 0 !important;
+	margin-bottom   : 8px;
+	box-sizing      : border-box;
+	height          : auto;
+	display         : flex;
+	flex-direction  : row;
+	justify-content : flex-start;
+	align-items     : flex-start;
+	background-color: #ffffff;
+	overflow        : visible;
+	border-radius   : 4px;
+	border          : 1px solid rgba(61, 61, 61, 0.1);
+	font-family     : "Urbanist", serif;
+	font-size       : 14px;
+	padding-left    : 25px;
+	padding-right   : 25px;
+	padding-top     : 10px;
+	padding-bottom  : 10px;
+}
+
+.attrEntry input:focus {
+	outline: 0px;
+}
+
+.attrEntry svg {
+	display: none;
+}
+
+.attrEntry a {
+	display: none;
+}
+
+#emailVerificationControl_but_send_code {
+	width           : 100%;
+	box-sizing      : border-box;
+	display         : flex;
+	flex-direction  : row;
+	justify-content : center;
+	align-items     : center;
+	padding         : 16px;
+	background-color: #3a3b81;
+	overflow        : visible;
+	border-radius   : 4px;
+	font-weight     : 500;
+	font-style      : normal;
+	font-family     : "Urbanist", serif;
+	color           : #ffffff;
+	font-size       : 14px;
+	letter-spacing  : 0px;
+	line-height     : 1.2;
+	text-align      : center;
+	margin-bottom   : 16px;
+	border          : none
+}
+
+#emailVerificationControl_but_send_code:focus,
+#continue:focus,
+#cancel:focus {
+	outline: none;
+}
+
+#continue {
+	box-sizing      : border-box;
+	padding         : 16px;
+	background-color: #3a3b81;
+	overflow        : visible;
+	border-radius   : 4px;
+	font-weight     : 500;
+	font-style      : normal;
+	font-family     : "Urbanist", serif;
+	color           : #ffffff;
+	font-size       : 14px;
+	letter-spacing  : 0px;
+	line-height     : 1.2;
+	text-align      : center;
+	margin-bottom   : 16px;
+	border          : none;
+}
+
+#cancel {
+	/* width           : 100%; */
+	box-sizing      : border-box;
+	padding         : 16px;
+	overflow        : visible;
+	border-radius   : 4px;
+	font-weight     : 500;
+	font-style      : normal;
+	font-family     : "Urbanist", serif;
+	background-color: rgba(58, 59, 129, .1);
+	color           : #3a3b81;
+	font-size       : 14px;
+	letter-spacing  : 0px;
+	line-height     : 1.2;
+	text-align      : center;
+	margin-bottom   : 16px;
+	border          : none;
+	margin-left     : 5px;
+	margin-right    : 5px;
+}
+
+.intro p {
+	overflow      : visible;
+	font-weight   : 400;
+	font-style    : normal;
+	font-family   : "Staatliches", serif;
+	color         : #3a3b81;
+	font-size     : 20px;
+	letter-spacing: 0px;
+	line-height   : 1.25;
+	text-transform: capitalize !important;
+	text-align    : center;
+}
