@@ -441,6 +441,14 @@
                 })
             })
 
+            document.querySelectorAll('label[for="email"]').forEach((element) => {
+                element.innerText = "Email"
+            })
+
+            document.querySelectorAll('#forgotPassword').forEach((element) => {
+                element.innerText = "Forgot my password!"
+            })
+
             // document.querySelectorAll("#email").forEach((element) => {
             //     element.parentElement.innerHTML += getInputIcon("email");
             // })
