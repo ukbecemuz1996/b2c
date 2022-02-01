@@ -457,12 +457,16 @@
                 element.innerText = "Login"
             })
 
-            document.querySelectorAll('.create p').forEach((element) => {
-                element.innerText = "I'm a new member."
-            })
+
 
             document.querySelectorAll('.create p a').forEach((element) => {
-                element.innerText = "Sign up"
+                let temp = element;
+                temp.innerText = "Sign up"
+                document.querySelectorAll('.create p').forEach((element1) => {
+                    element1.innerText = "I'm a new member."
+                    element1.appendChild(temp);
+                })
+
             })
 
             // document.querySelectorAll("#email").forEach((element) => {
