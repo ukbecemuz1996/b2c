@@ -220,8 +220,8 @@
         #forgotPassword {
             margin-left: 5px;
             margin-right: 5px;
-            color: #3a3b81;
-            text-decoration: underline;
+            color: #919191;
+            text-decoration: none;
             text-decoration-color: #3a3b81;
             font-family: "Urbanist", serif;
             font-size: 12px;
@@ -265,6 +265,10 @@
             line-height: 1.2;
             text-align: center;
             margin-bottom: 24px;
+        }
+
+        .rememberMe {
+            margin-bottom: 4px;
         }
 
         .rememberMe label {
@@ -447,6 +451,18 @@
 
             document.querySelectorAll('#forgotPassword').forEach((element) => {
                 element.innerText = "Forgot my password!"
+            })
+
+            document.querySelectorAll('#next').forEach((element) => {
+                element.innerText = "Login"
+            })
+
+            document.querySelectorAll('.create p').forEach((element) => {
+                element.innerText = "I'm a new member."
+            })
+
+            document.querySelectorAll('.create p a').forEach((element) => {
+                element.innerText = "Sign up"
             })
 
             // document.querySelectorAll("#email").forEach((element) => {
