@@ -435,6 +435,28 @@
         if (document.documentElement.lang === "ar") {
           document.dir = "rtl";
           document.body.style.background = "linear-gradient(270deg,rgba(255, 255, 255, 1) 50%,rgba(54, 55, 120, 1) 50%)";
+          document.querySelectorAll('label[for="email"]').forEach((element) => {
+            element.innerText = "البريد الالكتروني";
+          });
+          document.querySelectorAll('label[for="password"]').forEach((element) => {
+            element.innerText = "كلمة المرور";
+          });
+          document
+            .querySelectorAll("#title")
+            .forEach((element) => {
+              element.innerHTML = "استمتع بالفرص";
+            });
+            document
+            .querySelectorAll("#desc")
+            .forEach((element) => {
+              element.innerHTML = "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.";
+            });
+
+            document
+            .querySelectorAll("#localAccountForm .divider h2")
+            .forEach((element) => {
+              element.innerHTML = "او اكمل من خلال";
+            });
         } else {
           document
             .querySelectorAll("#localAccountForm .divider h2")
