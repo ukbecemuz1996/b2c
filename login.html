@@ -435,10 +435,14 @@
           document.body.style.textAlign = "right";
           document.querySelectorAll('label[for="email"]').forEach((element) => {
             element.innerText = "البريد الالكتروني";
+          });
+          document.querySelectorAll('#email').forEach((element) => {
             element.placeholder = "البريد الالكتروني";
           });
           document.querySelectorAll('label[for="password"]').forEach((element) => {
             element.innerText = "كلمة المرور";
+          });
+          document.querySelectorAll('#password').forEach((element) => {
             element.placeholder = "كلمة المرور";
           });
           document
