@@ -429,6 +429,15 @@
     </div>
     <script>
       const editSocialButtons = () => {
+        document
+          .querySelectorAll(".claims-provider-list-buttons .intro")
+          .forEach((element) => {
+            let subTitle = document.createElement("p");
+            subTitle.classList.add("logo-subtitle");
+            subTitle.innerText = "Hola, Glad to see you again";
+            element.append(subTitle);
+          });
+  
         if (document.documentElement.lang === "ar") {
           document.dir = "rtl";
           document.body.style.background = "linear-gradient(270deg,rgba(255, 255, 255, 1) 50%,rgba(54, 55, 120, 1) 50%)";
@@ -465,6 +474,7 @@
             document
             .querySelectorAll(".logo-subtitle")
             .forEach((element) => {
+              console.log(element);
               element.innerText = "Merhaba, سعيد لرؤيتك مرة أخرى";
             });
         } else {
@@ -514,15 +524,6 @@
           .querySelectorAll(".claims-provider-list-buttons .intro h2")
           .forEach((element) => {
             element.innerHTML = "joblink";
-          });
-
-        document
-          .querySelectorAll(".claims-provider-list-buttons .intro")
-          .forEach((element) => {
-            let subTitle = document.createElement("p");
-            subTitle.classList.add("logo-subtitle");
-            subTitle.innerText = "Hola, Glad to see you again";
-            element.append(subTitle);
           });
 
         document
