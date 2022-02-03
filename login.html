@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
   <head>
     <title>JOBLINK - Login</title>
     <link
@@ -156,7 +156,6 @@
         font-size: 12px;
         letter-spacing: 0px;
         line-height: 1.2;
-        text-align: left;
         margin-bottom: 4px;
       }
 
@@ -300,7 +299,6 @@
         font-size: 12px;
         letter-spacing: 0px;
         line-height: 1.2;
-        text-align: left;
         margin-bottom: 0;
       }
 
@@ -406,7 +404,6 @@
         font-size: 16px;
         letter-spacing: 0px;
         line-height: 1.2;
-        text-align: left;
       }
     </style>
   </head>
@@ -435,6 +432,7 @@
         if (document.documentElement.lang === "ar") {
           document.dir = "rtl";
           document.body.style.background = "linear-gradient(270deg,rgba(255, 255, 255, 1) 50%,rgba(54, 55, 120, 1) 50%)";
+          document.body.style.textAlign = "right";
           document.querySelectorAll('label[for="email"]').forEach((element) => {
             element.innerText = "البريد الالكتروني";
           });
@@ -445,7 +443,6 @@
             .querySelectorAll(".title")
             .forEach((element) => {
               element.innerHTML = "استمتع بالفرص";
-              element.dir = "rtl";
             });
             document
             .querySelectorAll(".desc")
@@ -460,7 +457,7 @@
             });
 
             document
-            .querySelectorAll("html body div.container.login div.row.justify-content-center div.col-lg-6.col-10.side-1.rounded-lg div.jl-form div#api div.claims-provider-list-buttons.social div.intro p.logo-subtitle")
+            .querySelectorAll(".logo-subtitle")
             .forEach((element) => {
               element.innerHTML = "Merhaba, سعيد لرؤيتك مرة أخرى";
             });
