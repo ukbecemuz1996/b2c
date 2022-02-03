@@ -330,9 +330,10 @@
           if (document.documentElement.lang === "ar") {
             document.dir = "rtl";
             document.body.style.background = "linear-gradient(270deg,rgba(255, 255, 255, 1) 50%,rgba(54, 55, 120, 1) 50%)";
-            document.body.style.textAlign = "right !important";
+            document.body.style.textAlign = "right";
             document.querySelectorAll('label[for="email"]').forEach((element) => {
               element.innerText = "البريد الالكتروني";
+              element.style.textAlign = "right";
             });
             document.querySelectorAll('#email').forEach((element) => {
               element.placeholder = "البريد الالكتروني";
