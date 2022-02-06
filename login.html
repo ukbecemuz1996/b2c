@@ -1,577 +1,550 @@
 <!DOCTYPE html>
 <html lang="ar">
-  <head>
+
+<head>
     <title>JOBLINK - Login</title>
-    <link
-      rel="icon"
-      href="https://raw.githubusercontent.com/ukbecemuz1996/b2c/master/JobLink.ico"
-    />
+    <link rel="icon" href="https://raw.githubusercontent.com/ukbecemuz1996/b2c/master/JobLink.ico" />
     <!-- <link rel="stylesheet" href="login.css"> -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Staatliches&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;500&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Staatliches&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@100;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" />
     <script src="https://unpkg.com/phosphor-icons"></script>
 
     <style>
-      #api {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+        #api {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-      #api .options {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 60px;
-      }
+        #api .options {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
 
-      #api .options div {
-        padding: 0.5rem;
-      }
+        #api .options div {
+            padding: 0.5rem;
+        }
 
-      #api .options button.accountButton {
-        position: relative;
-        border: none;
-        font-size: 0.8rem;
-        font-weight: 700;
-        padding: 0.7rem;
-        border-radius: 0.5rem;
-        background-color: rgba(58, 59, 129, 0.1);
-        color: #3a3b81;
-      }
+        #api .options button.accountButton {
+            position: relative;
+            border: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.7rem;
+            border-radius: 0.5rem;
+            background-color: rgba(58, 59, 129, 0.1);
+            color: #3a3b81;
+        }
 
-      #api .options button.accountButton:focus,
-      #api .options button.accountButton:active {
-        outline: none !important;
-      }
+        #api .options button.accountButton:focus,
+        #api .options button.accountButton:active {
+            outline: none !important;
+        }
 
-      .intro h2 {
-        overflow: visible;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Staatliches", serif;
-        color: #3a3b81;
-        font-size: 45px;
-        letter-spacing: 0px;
-        line-height: 1.25;
-        text-transform: capitalize !important;
-        text-align: center;
-        /* margin-bottom : 16px; */
-      }
+        .intro h2 {
+            overflow: visible;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Staatliches", serif;
+            color: #3a3b81;
+            font-size: 45px;
+            letter-spacing: 0px;
+            line-height: 1.25;
+            text-transform: capitalize !important;
+            text-align: center;
+            /* margin-bottom : 16px; */
+        }
 
-      .divider {
-        position: relative;
-      }
+        .divider {
+            position: relative;
+        }
 
-      #api {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-      }
+        #api {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
 
-      #api .localAccount {
-        width: 100%;
-      }
+        #api .localAccount {
+            width: 100%;
+        }
 
-      #api .social {
-        width: 100%;
-      }
+        #api .social {
+            width: 100%;
+        }
 
-      .divider {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        width: 50%;
-        margin-top: 1rem;
-        margin-bottom: 0 !important;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Urbanist", serif;
-        color: #919191;
-        letter-spacing: 0px;
-        line-height: 1.2;
-        text-align: center;
-        align-self: center;
-      }
+        .divider {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            width: 50%;
+            margin-top: 1rem;
+            margin-bottom: 0 !important;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Urbanist", serif;
+            color: #919191;
+            letter-spacing: 0px;
+            line-height: 1.2;
+            text-align: center;
+            align-self: center;
+        }
 
-      .divider::before,
-      .divider::after {
-        content: "";
-        flex: 1;
-        border-bottom: 1px solid #919191a1;
-      }
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid #919191a1;
+        }
 
-      .divider:not(:empty)::before {
-        margin-right: 0.25em;
-      }
+        .divider:not(:empty)::before {
+            margin-right: 0.25em;
+        }
 
-      .divider:not(:empty)::after {
-        margin-left: 0.25em;
-      }
+        .divider:not(:empty)::after {
+            margin-left: 0.25em;
+        }
 
-      .divider h2 {
-        font-size: 12px;
-      }
+        .divider h2 {
+            font-size: 12px;
+        }
 
-      .entry .entry-item {
-        position: relative;
-      }
+        .entry .entry-item {
+            position: relative;
+        }
 
-      .entry .entry-item label {
-        display: inline-block !important;
-        word-wrap: break-word;
-        word-break: break-word;
-        overflow: hidden;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Urbanist", serif;
-        color: #919191;
-        font-size: 12px;
-        letter-spacing: 0px;
-        line-height: 1.2;
-        margin-bottom: 4px;
-      }
+        .entry .entry-item label {
+            display: inline-block !important;
+            word-wrap: break-word;
+            word-break: break-word;
+            overflow: hidden;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Urbanist", serif;
+            color: #919191;
+            font-size: 12px;
+            letter-spacing: 0px;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
 
-      .entry .entry-item input {
-        width: 100%;
-        color: rgb(61, 61, 61);
-        margin-top: 0 !important;
-        margin-bottom: 1rem;
-        box-sizing: border-box;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        background-color: #ffffff;
-        overflow: visible;
-        border-radius: 4px;
-        border: 1px solid rgba(61, 61, 61, 0.1);
-        font-family: "Urbanist", serif;
-        font-size: 14px;
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
+        .entry .entry-item input {
+            width: 100%;
+            color: rgb(61, 61, 61);
+            margin-top: 0 !important;
+            margin-bottom: 1rem;
+            box-sizing: border-box;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: #ffffff;
+            overflow: visible;
+            border-radius: 4px;
+            border: 1px solid rgba(61, 61, 61, 0.1);
+            font-family: "Urbanist", serif;
+            font-size: 14px;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
 
-      .entry .entry-item input:focus {
-        outline: 0px;
-      }
+        .entry .entry-item input:focus {
+            outline: 0px;
+        }
 
-      .entry .buttons button[type="submit"] {
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 16px;
-        background-color: #3a3b81;
-        overflow: visible;
-        border-radius: 4px;
-        font-weight: 500;
-        font-style: normal;
-        font-family: "Urbanist", serif;
-        color: #ffffff;
-        font-size: 14px;
-        letter-spacing: 0px;
-        line-height: 1.2;
-        text-align: center;
-        margin-bottom: 16px;
-        border: none;
-      }
+        .entry .buttons button[type="submit"] {
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            background-color: #3a3b81;
+            overflow: visible;
+            border-radius: 4px;
+            font-weight: 500;
+            font-style: normal;
+            font-family: "Urbanist", serif;
+            color: #ffffff;
+            font-size: 14px;
+            letter-spacing: 0px;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 16px;
+            border: none;
+        }
 
-      .entry .buttons button[type="submit"]:focus {
-        outline: none;
-      }
+        .entry .buttons button[type="submit"]:focus {
+            outline: none;
+        }
 
-      .create {
-        overflow: visible;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Urbanist", serif;
-        color: #919191;
-        font-size: 12px;
-        letter-spacing: 0px;
-        line-height: 1.2;
-        text-align: center;
-      }
+        .create {
+            overflow: visible;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Urbanist", serif;
+            color: #919191;
+            font-size: 12px;
+            letter-spacing: 0px;
+            line-height: 1.2;
+            text-align: center;
+        }
 
-      .create #createAccount {
-        margin-left: 5px;
-        margin-right: 5px;
-        color: #3a3b81;
-        text-decoration: underline;
-        text-decoration-color: #3a3b81;
-        font-size: 12px;
-      }
+        .create #createAccount {
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #3a3b81;
+            text-decoration: underline;
+            text-decoration-color: #3a3b81;
+            font-size: 12px;
+        }
 
-      #forgotPassword {
-        margin-left: 5px;
-        margin-right: 5px;
-        color: #919191;
-        text-decoration: none;
-        text-decoration-color: #3a3b81;
-        font-family: "Urbanist", serif;
-        font-size: 12px;
-        margin-bottom: 4px;
-      }
+        #forgotPassword {
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #919191;
+            text-decoration: none;
+            text-decoration-color: #3a3b81;
+            font-family: "Urbanist", serif;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
 
-      .password-label {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
+        .password-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-      .error {
-        color: red;
-        font-size: 12px;
-        font-family: "Urbanist", serif;
-      }
+        .error {
+            color: red;
+            font-size: 12px;
+            font-family: "Urbanist", serif;
+        }
 
-      .error p {
-        margin-bottom: 0;
-      }
+        .error p {
+            margin-bottom: 0;
+        }
 
-      form {
-        display: flex;
-        flex-direction: column;
-      }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
 
-      .logo-subtitle {
-        width: auto;
-        height: auto;
-        flex-shrink: 0;
-        overflow: visible;
-        white-space: pre;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Urbanist", serif;
-        color: #404040;
-        font-size: 14px;
-        letter-spacing: 0px;
-        line-height: 1.2;
-        text-align: center;
-        margin-bottom: 24px;
-      }
+        .logo-subtitle {
+            width: auto;
+            height: auto;
+            flex-shrink: 0;
+            overflow: visible;
+            white-space: pre;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Urbanist", serif;
+            color: #404040;
+            font-size: 14px;
+            letter-spacing: 0px;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 24px;
+        }
 
-      .rememberMe {
-        margin-bottom: 4px;
-      }
+        .rememberMe {
+            margin-bottom: 4px;
+        }
 
-      .rememberMe label {
-        display: inline-block !important;
-        word-wrap: break-word;
-        word-break: break-word;
-        overflow: hidden;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Urbanist", serif;
-        color: #919191;
-        font-size: 12px;
-        letter-spacing: 0px;
-        line-height: 1.2;
-        margin-bottom: 0;
-      }
+        .rememberMe label {
+            display: inline-block !important;
+            word-wrap: break-word;
+            word-break: break-word;
+            overflow: hidden;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Urbanist", serif;
+            color: #919191;
+            font-size: 12px;
+            letter-spacing: 0px;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
 
-      @media (max-width: 575.98px) {
-        /* .intro h2 {
+        @media (max-width: 575.98px) {
+            /* .intro h2 {
 		font-size: 25px;
 	} */
 
-        .side-1 .jl-form {
-          padding-left: 5px;
-          padding-right: 5px;
+            .side-1 .jl-form {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
         }
-      }
 
-      @media (min-width: 576px) and (max-width: 767.98px) {
-      }
+        @media (min-width: 576px) and (max-width: 767.98px) {}
 
-      @media (min-width: 768px) and (max-width: 991.98px) {
-      }
+        @media (min-width: 768px) and (max-width: 991.98px) {}
 
-      @media (min-width: 992px) and (max-width: 1199.98px) {
-      }
+        @media (min-width: 992px) and (max-width: 1199.98px) {}
 
-      @media (min-width: 1200px) {
-      }
+        @media (min-width: 1200px) {}
 
-      body {
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 1) 50%,
-          rgba(54, 55, 120, 1) 50%
-        );
-      }
+        body {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 1) 50%,
+                    rgba(54, 55, 120, 1) 50%);
+        }
 
-      .login {
-        position: absolute;
+        .login {
+            /* position: absolute;
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        height: 85%;
-      }
+        height: 85%; */
+            margin-top: 50px;
+        }
 
-      .login .row {
-        height: 100%;
-      }
+        .login .row {
+            /* height: 100%; */
+        }
 
-      .side-1 {
-        background-color: #f5f5f5;
-        box-shadow: 0px 0px 120px 0px rgba(0, 0, 0, 0.2);
-        height: 100% !important;
-      }
+        .side-1 {
+            background-color: #f5f5f5;
+            box-shadow: 0px 0px 120px 0px rgba(0, 0, 0, 0.2);
+            /* height: 100% !important; */
+        }
 
-      .side-1 .jl-form {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        width: 70%;
-      }
+        .side-1 .jl-form {
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
 
-      .side-2 {
-        position: relative;
-        color: #fff;
-        background-color: #3a3b81;
-        box-shadow: 0px 0px 120px 0px rgba(0, 0, 0, 0.2);
-        height: 100% !important;
-        background-image: url(https://raw.githubusercontent.com/ukbecemuz1996/b2c/master/bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
+        .side-2 {
+            position: relative;
+            color: #fff;
+            background-color: #3a3b81;
+            box-shadow: 0px 0px 120px 0px rgba(0, 0, 0, 0.2);
+            height: 100% !important;
+            background-image: url(https://raw.githubusercontent.com/ukbecemuz1996/b2c/master/bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
 
-      .side-2 .info {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        padding-left: 80px;
-        padding-right: 80px;
-      }
+        .side-2 .info {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-left: 80px;
+            padding-right: 80px;
+        }
 
-      .side-2 .info .title {
-        overflow: visible;
-        font-weight: 600;
-        font-style: normal;
-        font-family: "Urbanist", serif;
-        color: #ffffff;
-        font-size: 50px;
-        letter-spacing: 0px;
-        line-height: 1.1;
-        margin-bottom: 10px;
-      }
+        .side-2 .info .title {
+            overflow: visible;
+            font-weight: 600;
+            font-style: normal;
+            font-family: "Urbanist", serif;
+            color: #ffffff;
+            font-size: 50px;
+            letter-spacing: 0px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
 
-      .side-2 .info .desc {
-        word-wrap: break-word;
-        word-break: break-word;
-        overflow: hidden;
-        font-weight: 400;
-        font-style: normal;
-        font-family: "Urbanist", serif;
-        color: #ffffff;
-        font-size: 16px;
-        letter-spacing: 0px;
-        line-height: 1.2;
-      }
+        .side-2 .info .desc {
+            word-wrap: break-word;
+            word-break: break-word;
+            overflow: hidden;
+            font-weight: 400;
+            font-style: normal;
+            font-family: "Urbanist", serif;
+            color: #ffffff;
+            font-size: 16px;
+            letter-spacing: 0px;
+            line-height: 1.2;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container login">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-10 side-1 rounded-lg">
-          <div class="jl-form">
-            <div id="api"></div>
-          </div>
-        </div>
-        <div class="col-lg-6 d-lg-flex d-md-none d-none side-2 rounded-lg">
-          <div class="info">
-            <div class="title">Enjoy the Opportunities</div>
-            <div class="desc">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-10 side-1 rounded-lg">
+                <div class="jl-form">
+                    <div id="api"></div>
+                </div>
             </div>
-          </div>
+            <div class="col-lg-6 d-lg-flex d-md-none d-none side-2 rounded-lg">
+                <div class="info">
+                    <div class="title">Enjoy the Opportunities</div>
+                    <div class="desc">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <script>
-      const editSocialButtons = () => {
-        document
-          .querySelectorAll(".claims-provider-list-buttons .intro")
-          .forEach((element) => {
-            let subTitle = document.createElement("p");
-            subTitle.classList.add("logo-subtitle");
-            subTitle.innerText = "Hola, Glad to see you again";
-            element.append(subTitle);
-          });
-  
-        if (document.documentElement.lang === "ar") {
-          document.dir = "rtl";
-          document.body.style.background = "linear-gradient(270deg,rgba(255, 255, 255, 1) 50%,rgba(54, 55, 120, 1) 50%)";
-          document.body.style.textAlign = "right";
-          document.querySelectorAll('label[for="email"]').forEach((element) => {
-            element.innerText = "البريد الالكتروني";
-          });
-          document.querySelectorAll('#email').forEach((element) => {
-            element.placeholder = "البريد الالكتروني";
-          });
-          document.querySelectorAll('label[for="password"]').forEach((element) => {
-            element.innerText = "كلمة المرور";
-          });
-          document.querySelectorAll('#password').forEach((element) => {
-            element.placeholder = "كلمة المرور";
-          });
-          document
-            .querySelectorAll(".title")
-            .forEach((element) => {
-              element.innerHTML = "استمتع بالفرص";
-            });
+        const editSocialButtons = () => {
             document
-            .querySelectorAll(".desc")
-            .forEach((element) => {
-              element.innerHTML = "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.";
+                .querySelectorAll(".claims-provider-list-buttons .intro")
+                .forEach((element) => {
+                    let subTitle = document.createElement("p");
+                    subTitle.classList.add("logo-subtitle");
+                    subTitle.innerText = "Hola, Glad to see you again";
+                    element.append(subTitle);
+                });
+
+            if (document.documentElement.lang === "ar") {
+                document.dir = "rtl";
+                document.body.style.background = "linear-gradient(270deg,rgba(255, 255, 255, 1) 50%,rgba(54, 55, 120, 1) 50%)";
+                document.body.style.textAlign = "right";
+                document.querySelectorAll('label[for="email"]').forEach((element) => {
+                    element.innerText = "البريد الالكتروني";
+                });
+                document.querySelectorAll('#email').forEach((element) => {
+                    element.placeholder = "البريد الالكتروني";
+                });
+                document.querySelectorAll('label[for="password"]').forEach((element) => {
+                    element.innerText = "كلمة المرور";
+                });
+                document.querySelectorAll('#password').forEach((element) => {
+                    element.placeholder = "كلمة المرور";
+                });
+                document
+                    .querySelectorAll(".title")
+                    .forEach((element) => {
+                        element.innerHTML = "استمتع بالفرص";
+                    });
+                document
+                    .querySelectorAll(".desc")
+                    .forEach((element) => {
+                        element.innerHTML = "هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.";
+                    });
+
+                document
+                    .querySelectorAll("#localAccountForm .divider h2")
+                    .forEach((element) => {
+                        element.innerHTML = "او اكمل من خلال";
+                    });
+
+                document
+                    .querySelectorAll(".logo-subtitle")
+                    .forEach((element) => {
+                        console.log(element);
+                        element.innerText = "Merhaba, سعيد لرؤيتك مرة أخرى";
+                    });
+            } else {
+                document
+                    .querySelectorAll("#localAccountForm .divider h2")
+                    .forEach((element) => {
+                        element.innerHTML = "Or Continue With";
+                    });
+
+                document.querySelectorAll('label[for="email"]').forEach((element) => {
+                    element.innerText = "Email";
+                });
+
+                document.querySelectorAll("#forgotPassword").forEach((element) => {
+                    element.innerText = "Forgot my password!";
+                });
+
+                document.querySelectorAll("#next").forEach((element) => {
+                    element.innerText = "Login";
+                });
+
+                document.querySelectorAll(".create p a").forEach((element) => {
+                    let temp = element;
+                    temp.innerText = "Sign up";
+                    document.querySelectorAll(".create p").forEach((element1) => {
+                        element1.innerText = "I'm a new member.";
+                        element1.appendChild(temp);
+                    });
+                });
+            }
+
+            document.querySelectorAll(".accountButton").forEach((element) => {
+                element.innerHTML = getButtonIcon(element.id);
+            });
+
+            document.querySelectorAll(".divider").forEach((element) => {
+                if (element.parentElement.id !== "localAccountForm") element.remove();
             });
 
             document
-            .querySelectorAll("#localAccountForm .divider h2")
-            .forEach((element) => {
-              element.innerHTML = "او اكمل من خلال";
-            });
+                .querySelectorAll("#localAccountForm .intro")
+                .forEach((element) => {
+                    element.remove();
+                });
 
             document
-            .querySelectorAll(".logo-subtitle")
-            .forEach((element) => {
-              console.log(element);
-              element.innerText = "Merhaba, سعيد لرؤيتك مرة أخرى";
-            });
-        } else {
-          document
-            .querySelectorAll("#localAccountForm .divider h2")
-            .forEach((element) => {
-              element.innerHTML = "Or Continue With";
-            });
+                .querySelectorAll(".claims-provider-list-buttons .intro h2")
+                .forEach((element) => {
+                    element.innerHTML = "joblink";
+                });
 
-          document.querySelectorAll('label[for="email"]').forEach((element) => {
-            element.innerText = "Email";
-          });
-
-          document.querySelectorAll("#forgotPassword").forEach((element) => {
-            element.innerText = "Forgot my password!";
-          });
-
-          document.querySelectorAll("#next").forEach((element) => {
-            element.innerText = "Login";
-          });
-
-          document.querySelectorAll(".create p a").forEach((element) => {
-            let temp = element;
-            temp.innerText = "Sign up";
-            document.querySelectorAll(".create p").forEach((element1) => {
-              element1.innerText = "I'm a new member.";
-              element1.appendChild(temp);
-            });
-          });
-        }
-
-        document.querySelectorAll(".accountButton").forEach((element) => {
-          element.innerHTML = getButtonIcon(element.id);
-        });
-
-        document.querySelectorAll(".divider").forEach((element) => {
-          if (element.parentElement.id !== "localAccountForm") element.remove();
-        });
-
-        document
-          .querySelectorAll("#localAccountForm .intro")
-          .forEach((element) => {
-            element.remove();
-          });
-
-        document
-          .querySelectorAll(".claims-provider-list-buttons .intro h2")
-          .forEach((element) => {
-            element.innerHTML = "joblink";
-          });
-
-        document
-          .querySelectorAll(".claims-provider-list-buttons .options")
-          .forEach((element1) => {
             document
-              .querySelectorAll("#localAccountForm .divider")
-              .forEach((element2) => {
-                element2.after(element1);
-              });
-          });
+                .querySelectorAll(".claims-provider-list-buttons .options")
+                .forEach((element1) => {
+                    document
+                        .querySelectorAll("#localAccountForm .divider")
+                        .forEach((element2) => {
+                            element2.after(element1);
+                        });
+                });
 
-        // document.querySelectorAll("#email").forEach((element) => {
-        //     element.parentElement.innerHTML += getInputIcon("email");
-        // })
+            // document.querySelectorAll("#email").forEach((element) => {
+            //     element.parentElement.innerHTML += getInputIcon("email");
+            // })
 
-        // document.querySelectorAll("#password").forEach((element) => {
-        //     element.parentElement.innerHTML += getInputIcon("password");
-        // })
+            // document.querySelectorAll("#password").forEach((element) => {
+            //     element.parentElement.innerHTML += getInputIcon("password");
+            // })
 
-        console.log("iam here");
-      };
+            console.log("iam here");
+        };
 
-      const getButtonIcon = (id) => {
-        switch (id) {
-          case "GoogleExchange":
-            return '<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#3a3b81" viewBox="0 0 256 256" xml:space="preserve"> <path d="M0,105C0,47.103,47.103,0,105,0c23.383,0,45.515,7.523,64.004,21.756l-24.4,31.696C133.172,44.652,119.477,40,105,40 c-35.841,0-65,29.159-65,65s29.159,65,65,65c28.867,0,53.398-18.913,61.852-45H105V85h105v20c0,57.897-47.103,105-105,105 S0,162.897,0,105z"/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>';
-          case "FacebookExchange":
-            return '<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 290 290" width="20" height="20" style="enable-background:new 0 0 290 290;" xml:space="preserve"> <path fill="#3a3b81" d="M205.807,0h-15.694c-43.62,0-79.107,35.488-79.107,79.108v33.386H84.193c-2.761,0-5,2.239-5,5v40c0,2.761,2.239,5,5,5 h26.811V285c0,2.761,2.239,5,5,5h40c2.761,0,5-2.239,5-5V162.494h39.786c2.761,0,5-2.239,5-5v-40c0-2.761-2.239-5-5-5h-39.786 V79.108c0-16.05,13.058-29.108,29.107-29.108h15.694c2.761,0,5-2.239,5-5V5C210.807,2.239,208.568,0,205.807,0z"/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>';
-          case "MicrosoftAccountExchange":
-            return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"> <path d="M 0.031 2.263 L 6.544 1.376 L 6.547 7.659 L 0.037 7.696 L 0.031 2.264 Z M 6.541 8.383 L 6.546 14.671 L 0.036 13.776 L 0.036 8.341 L 6.541 8.383 Z M 7.331 1.26 L 15.967 0 L 15.967 7.579 L 7.331 7.648 L 7.331 1.26 Z M 15.969 8.442 L 15.967 15.987 L 7.331 14.768 L 7.319 8.428 Z" fill="rgb(58, 59, 129)"></path> </svg>';
-          case "AppleManagedExchange":
-            return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"> <path d="M 2.404 6.617 C 0.882 9.258 1.85 13.265 3.533 15.695 C 4.373 16.91 5.223 18 6.388 18 C 6.41 18 6.432 18 6.454 17.999 C 7.002 17.977 7.397 17.808 7.779 17.646 C 8.209 17.463 8.653 17.273 9.349 17.273 C 10.012 17.273 10.434 17.456 10.843 17.633 C 11.246 17.808 11.661 17.988 12.275 17.977 C 13.587 17.952 14.392 16.775 15.103 15.737 C 15.845 14.654 16.217 13.601 16.342 13.199 L 16.347 13.183 C 16.371 13.112 16.337 13.034 16.269 13.002 C 16.267 13.001 16.26 12.998 16.258 12.998 C 16.027 12.903 14 12.004 13.979 9.553 C 13.959 7.562 15.499 6.508 15.808 6.317 L 15.823 6.308 C 15.856 6.286 15.88 6.252 15.887 6.213 C 15.895 6.174 15.887 6.134 15.865 6.101 C 14.802 4.545 13.172 4.311 12.516 4.282 C 12.419 4.273 12.322 4.268 12.224 4.268 C 11.453 4.268 10.715 4.559 10.122 4.793 C 9.713 4.954 9.359 5.094 9.116 5.094 C 8.842 5.094 8.486 4.953 8.074 4.789 C 7.524 4.571 6.899 4.323 6.239 4.323 C 6.223 4.323 6.208 4.323 6.192 4.324 C 4.656 4.346 3.204 5.225 2.404 6.617 Z" fill="rgb(58, 59, 129)"></path> <path d="M 12.517 0 C 11.587 0.038 10.471 0.611 9.804 1.392 C 9.237 2.049 8.684 3.143 8.83 4.247 C 8.839 4.316 8.895 4.369 8.964 4.375 C 9.027 4.38 9.091 4.382 9.155 4.382 C 10.065 4.382 11.046 3.879 11.716 3.069 C 12.421 2.213 12.778 1.115 12.67 0.131 C 12.661 0.055 12.595 -0.003 12.517 0 Z" fill="rgb(58, 59, 129)"></path> </svg>';
-          case "TwitterExchange":
-            return '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3a3b81" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,88c0-22,18.5-40.3,40.5-40a40,40,0,0,1,36.2,24H240l-32.3,32.3A127.9,127.9,0,0,1,80,224c-32,0-40-12-40-12s32-12,48-36c0,0-64-32-48-120,0,0,40,40,88,48Z" fill="none" stroke="#3a3b81" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path></svg>';
-        }
-      };
+        const getButtonIcon = (id) => {
+            switch (id) {
+                case "GoogleExchange":
+                    return '<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#3a3b81" viewBox="0 0 256 256" xml:space="preserve"> <path d="M0,105C0,47.103,47.103,0,105,0c23.383,0,45.515,7.523,64.004,21.756l-24.4,31.696C133.172,44.652,119.477,40,105,40 c-35.841,0-65,29.159-65,65s29.159,65,65,65c28.867,0,53.398-18.913,61.852-45H105V85h105v20c0,57.897-47.103,105-105,105 S0,162.897,0,105z"/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>';
+                case "FacebookExchange":
+                    return '<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 290 290" width="20" height="20" style="enable-background:new 0 0 290 290;" xml:space="preserve"> <path fill="#3a3b81" d="M205.807,0h-15.694c-43.62,0-79.107,35.488-79.107,79.108v33.386H84.193c-2.761,0-5,2.239-5,5v40c0,2.761,2.239,5,5,5 h26.811V285c0,2.761,2.239,5,5,5h40c2.761,0,5-2.239,5-5V162.494h39.786c2.761,0,5-2.239,5-5v-40c0-2.761-2.239-5-5-5h-39.786 V79.108c0-16.05,13.058-29.108,29.107-29.108h15.694c2.761,0,5-2.239,5-5V5C210.807,2.239,208.568,0,205.807,0z"/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>';
+                case "MicrosoftAccountExchange":
+                    return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"> <path d="M 0.031 2.263 L 6.544 1.376 L 6.547 7.659 L 0.037 7.696 L 0.031 2.264 Z M 6.541 8.383 L 6.546 14.671 L 0.036 13.776 L 0.036 8.341 L 6.541 8.383 Z M 7.331 1.26 L 15.967 0 L 15.967 7.579 L 7.331 7.648 L 7.331 1.26 Z M 15.969 8.442 L 15.967 15.987 L 7.331 14.768 L 7.319 8.428 Z" fill="rgb(58, 59, 129)"></path> </svg>';
+                case "AppleManagedExchange":
+                    return '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"> <path d="M 2.404 6.617 C 0.882 9.258 1.85 13.265 3.533 15.695 C 4.373 16.91 5.223 18 6.388 18 C 6.41 18 6.432 18 6.454 17.999 C 7.002 17.977 7.397 17.808 7.779 17.646 C 8.209 17.463 8.653 17.273 9.349 17.273 C 10.012 17.273 10.434 17.456 10.843 17.633 C 11.246 17.808 11.661 17.988 12.275 17.977 C 13.587 17.952 14.392 16.775 15.103 15.737 C 15.845 14.654 16.217 13.601 16.342 13.199 L 16.347 13.183 C 16.371 13.112 16.337 13.034 16.269 13.002 C 16.267 13.001 16.26 12.998 16.258 12.998 C 16.027 12.903 14 12.004 13.979 9.553 C 13.959 7.562 15.499 6.508 15.808 6.317 L 15.823 6.308 C 15.856 6.286 15.88 6.252 15.887 6.213 C 15.895 6.174 15.887 6.134 15.865 6.101 C 14.802 4.545 13.172 4.311 12.516 4.282 C 12.419 4.273 12.322 4.268 12.224 4.268 C 11.453 4.268 10.715 4.559 10.122 4.793 C 9.713 4.954 9.359 5.094 9.116 5.094 C 8.842 5.094 8.486 4.953 8.074 4.789 C 7.524 4.571 6.899 4.323 6.239 4.323 C 6.223 4.323 6.208 4.323 6.192 4.324 C 4.656 4.346 3.204 5.225 2.404 6.617 Z" fill="rgb(58, 59, 129)"></path> <path d="M 12.517 0 C 11.587 0.038 10.471 0.611 9.804 1.392 C 9.237 2.049 8.684 3.143 8.83 4.247 C 8.839 4.316 8.895 4.369 8.964 4.375 C 9.027 4.38 9.091 4.382 9.155 4.382 C 10.065 4.382 11.046 3.879 11.716 3.069 C 12.421 2.213 12.778 1.115 12.67 0.131 C 12.661 0.055 12.595 -0.003 12.517 0 Z" fill="rgb(58, 59, 129)"></path> </svg>';
+                case "TwitterExchange":
+                    return '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#3a3b81" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,88c0-22,18.5-40.3,40.5-40a40,40,0,0,1,36.2,24H240l-32.3,32.3A127.9,127.9,0,0,1,80,224c-32,0-40-12-40-12s32-12,48-36c0,0-64-32-48-120,0,0,40,40,88,48Z" fill="none" stroke="#3a3b81" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path></svg>';
+            }
+        };
 
-      const getInputIcon = (input) => {
-        switch (input) {
-          case "email":
-            return '<svg style="position:absolute;top:50%;left:15px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="40" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></circle><path d="M181.1,208A96,96,0,1,1,224,128c0,22.1-8,40-28,40s-28-17.9-28-40V88" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path></svg>';
-          case "password":
-            return '<svg style="position:absolute;top:50%;left:15px" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><rect x="40" y="88" width="176" height="128" rx="8" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></rect><path d="M92,88V52a36,36,0,0,1,72,0V88" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path><circle cx="128" cy="152" r="8"></circle></svg>';
-        }
-      };
+        const getInputIcon = (input) => {
+            switch (input) {
+                case "email":
+                    return '<svg style="position:absolute;top:50%;left:15px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="40" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></circle><path d="M181.1,208A96,96,0,1,1,224,128c0,22.1-8,40-28,40s-28-17.9-28-40V88" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path></svg>';
+                case "password":
+                    return '<svg style="position:absolute;top:50%;left:15px" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><rect x="40" y="88" width="176" height="128" rx="8" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></rect><path d="M92,88V52a36,36,0,0,1,72,0V88" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path><circle cx="128" cy="152" r="8"></circle></svg>';
+            }
+        };
 
-      editSocialButtons();
+        editSocialButtons();
     </script>
-  </body>
+</body>
+
 </html>
